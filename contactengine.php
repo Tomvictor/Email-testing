@@ -5,7 +5,11 @@ $EmailTo = "vjtomvictor@icloud.com";
 $Subject = "Message from  Visitor";
 $Name = Trim(stripslashes($_POST['Name'])); 
 $Email = Trim(stripslashes($_POST['Email'])); 
-$Phone = Trim(stripslashes($_POST['Phone'])); 
+$Phone = Trim(stripslashes($_POST['Phone']));
+$temp = Trim(stripslashes($_POST['toEmail']));
+//added by tom
+$EmailFrom = $Email;
+$EmailTo =  $temp;
 // validation
 $validationOK=true;
 if (!$validationOK) {
