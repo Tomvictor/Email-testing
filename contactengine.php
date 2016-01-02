@@ -2,14 +2,10 @@
 
 $EmailFrom = "info@buildfromzero.com";
 $EmailTo = "vjtomvictor@icloud.com";
-$Subject = "Message from Ad Visitor";
+$Subject = "Message from  Visitor";
 $Name = Trim(stripslashes($_POST['Name'])); 
 $Email = Trim(stripslashes($_POST['Email'])); 
 $Phone = Trim(stripslashes($_POST['Phone'])); 
-$from = Trim(stripslashes($_POST['from']));
-$towho = Trim(stripslashes($_POST['towho']));
-$EmailFrom =$from;
-$EmailTo =$towho
 // validation
 $validationOK=true;
 if (!$validationOK) {
@@ -34,7 +30,7 @@ $success = mail($EmailTo, $Subject, $Body, "From: <$EmailFrom>");
 
 // redirect to success page 
 if ($success){
-  print "<meta http-equiv=\"refresh\" content=\"0;URL=contactthanks.html\">";
+  print "<meta http-equiv=\"refresh\" content=\"0;URL=thanks.html\">";
 }
 else{
   print "<meta http-equiv=\"refresh\" content=\"0;URL=error.html\">";
